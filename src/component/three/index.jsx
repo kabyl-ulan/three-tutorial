@@ -84,9 +84,9 @@ function Three() {
       {/* Camera */}
       <PerspectiveCamera makeDefault position={[0, 1, 5]} />
       <OrbitControls
-        // ref={orbitControlRef}
-        // minPolarAngle={angleToRadians(60)}
-        // maxPolarAngle={angleToRadians(80)}
+        ref={orbitControlRef}
+        minPolarAngle={angleToRadians(60)}
+        maxPolarAngle={angleToRadians(80)}
       />
 
       {/* Ball */}
@@ -99,10 +99,10 @@ function Three() {
       <Car />
 
       {/* Floor */}
-      {/* <mesh rotation={[-angleToRadians(90), 0, 0]} receiveShadow={true}>
+      <mesh rotation={[-angleToRadians(90), 0, 0]} receiveShadow={true}>
         <planeGeometry args={[20, 20]} />
         <meshStandardMaterial color="#1ea3d8" />
-      </mesh> */}
+      </mesh>
 
       {/* Ambient light */}
       <ambientLight args={["#ffffff", 0.25]} />

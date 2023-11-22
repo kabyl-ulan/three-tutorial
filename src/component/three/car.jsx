@@ -1,10 +1,15 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { angleToRadians } from "../../utils/angle";
 
 export function Car() {
   const { nodes, materials } = useGLTF("../../../public/models/car/model.glb");
   return (
-    <group dispose={null}>
+    <group
+      dispose={null}
+      position={[0, 0.6, -1]}
+      rotation={[0, angleToRadians(180), 0]}
+    >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.01}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group
